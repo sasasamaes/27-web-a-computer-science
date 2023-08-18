@@ -138,50 +138,52 @@ Getters y setters para cada propiedad.
 Un método resumen que devuelva "El libro [titulo] fue escrito por [autor] en el año [añoPublicacion].".
 Prueba creando un libro y modificando y obteniendo sus propiedades a través de los getters y setters.
  */
-// Definición de la clase Libro
 class Libro {
   // Constructor de la clase
   constructor(titulo, autor, anioPublicacion) {
-    this._titulo = titulo // Inicialización de la propiedad título
-    this._autor = autor // Inicialización de la propiedad autor
-    this._anioPublicacion = anioPublicacion // Inicialización de la propiedad añoPublicacion
+    this._titulo = titulo; // Inicialización de la propiedad título
+    this._autor = autor; // Inicialización de la propiedad autor
+    this._anioPublicacion = anioPublicacion; // Inicialización de la propiedad añoPublicacion
   }
 
   // Getter para la propiedad título
   get titulo() {
-    return this._titulo
+    return this._titulo;
   }
 
   // Setter para la propiedad título
   set titulo(nuevoTitulo) {
-    this._titulo = nuevoTitulo
+    this._titulo = nuevoTitulo;
   }
 
   // Getter para la propiedad autor
   get autor() {
-    return this._autor
+    return this._autor;
   }
 
   // Setter para la propiedad autor
   set autor(nuevoAutor) {
-    this._autor = nuevoAutor
+    this._autor = nuevoAutor;
   }
+
   // Getter para la propiedad añoPublicacion
   get anioPublicacion() {
-    return this.anioPublicacion
+    return this._anioPublicacion;  // CORRECCIÓN AQUÍ
   }
+
+  // Setter para la propiedad añoPublicacion
   set anioPublicacion(nuevoAnioPublicacion) {
-    this._anioPublicacion = nuevoAnioPublicacion
+    this._anioPublicacion = nuevoAnioPublicacion;
   }
 
   // Método para devolver un resumen del libro
   resumen() {
-    return `El libro ${this.titulo} fue escrito por ${this.autor} en el año ${this.anioPublicacion}.`
+    return `El libro ${this.titulo} fue escrito por ${this.autor} en el año ${this.anioPublicacion}.`;
   }
 }
 
 // Creación de un objeto de la clase Libro
-const libro1 = new Libro('1984', 'George Orwell', 1949)
-console.log(libro1.resumen()) // Impresión del resumen del libro
-libro1.titulo = 'Animal Farm' // Modificación del título mediante el setter
-console.log(libro1.resumen()) // Impresión del resumen actualizado del libro
+const libro1 = new Libro('1984', 'George Orwell', 1949);
+console.log(libro1.resumen()); // Impresión del resumen del libro
+libro1.titulo = 'Animal Farm'; // Modificación del título mediante el setter
+console.log(libro1.resumen()); // Impresión del resumen actualizado del libro
