@@ -140,6 +140,7 @@ class LinkedList {
       // Movemos el puntero 'prev' y 'current' un nodo hacia adelante
       prev = current
       current = next
+  
     }
     // Hacemos que la cabeza de la lista apunte al último nodo, completando así la inversión
     this.head = prev
