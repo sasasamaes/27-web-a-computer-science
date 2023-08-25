@@ -30,6 +30,8 @@ class LinkedList {
     }
     this.size++ // incrementamos el tamaño de la lista
   }
+
+  // Método para agregar varios nodos a la lista
   multiAppend(arr) {
     arr.forEach((node) => {
       this.append(node)
